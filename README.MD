@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python" alt=""/>
 <img src="https://img.shields.io/badge/-SQLite-black?style=flat-square&logo=sqlite" alt=""/>
 <br>
-云中转的第三方API(110992993)
+云中转的第三方API
 <br>
 ✨ฅ•∀•ฅ 可爱才是第一生产力 ฅ•∀•ฅ✨
 <br>
@@ -19,7 +19,14 @@
 
 ## 用法 ʕ•͡-•ʔ
 
-咕了
+请您创建一个config.json，内容如下
+``` config.json
+{
+  "USERNAME": "MY_USERNAME",
+  "PASSWORD": "MY_PASSWORD"
+}
+```
+然后安装requirements.txt里的需求，启动webdav.py 就可以了。
 
 ## 声明 (๑•ิཬ•ั๑)
 

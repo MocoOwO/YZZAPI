@@ -1,0 +1,4 @@
+httpx~=0.25.2
+rich~=13.7.0
+requests~=2.31.0
+flask~=3.0.0
