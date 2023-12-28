@@ -34,7 +34,7 @@ class Folder:
         self.date_int = data['date_int']
         self.id = data['id']
         self.parent = data['parent']
-        # TODO
+        # TODO: Path更新
         self.path = ""
 
     def __repr__(self):

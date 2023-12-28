@@ -78,7 +78,7 @@ def mainLogic(path):
             if file.name == filename:
                 # print("OK?")
                 main.logout(SESSION_ID)
-                return flask.redirect(f"https://download.moco.email{file.url}")
+                return flask.redirect(f"https://a.download.yunzhongzhuan.com{file.url}")
     main.logout(SESSION_ID)
     return "Not Found", 404
 
