@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<D:multistatus
+        xmlns:D="DAV:">
+    <D:response>
+        <D:href>
+            {{ path }}
+        </D:href>
+        <D:propstat>
+            <D:prop>
+                <D:getlastmodified>
+                    {{ file.get_GMT_time() }}
+                </D:getlastmodified>
+<!--                <D:getcontenttype>-->
+<!--                    application/x-java-archive-->
+<!--                </D:getcontenttype>-->
+                <D:getetag>
+                    "17452f6a4486afb7ba77"
+                </D:getetag>
+                <D:supportedlock>
+                    <D:lockentry
+                            xmlns:D="DAV:">
+                        <D:lockscope>
+                            <D:exclusive/>
+                        </D:lockscope>
+                        <D:locktype>
+                            <D:write/>
+                        </D:locktype>
+                    </D:lockentry>
+                </D:supportedlock>
+                <D:resourcetype>
+                </D:resourcetype>
+                <D:getcontentlength>
+                    {{ file.size }}
+                </D:getcontentlength>
+                <D:displayname>{{ file.name }}</D:displayname>
+            </D:prop>
+            <D:status>
+                HTTP/1.1 200 OK
+            </D:status>
+        </D:propstat>
+    </D:response>
+</D:multistatus>
