@@ -138,6 +138,12 @@ def get_usedsize(session_id):
                              data={"post": 1, "session_id": session_id}).text)
 
 
+def copy_file(session_id, from_dir, to_dir, fileid):
+    r = requests.post("https://c34a02aaeb0d6.cname.frontwize.com/php/v4/files_paste",
+                      data={"new_parent_folder_id": to_dir, "folders_id": 0, "files_id": f"{0},{fileid}",
+                            "session_id": session_id}).text
+
+
 def logout(session_id):
     """退出登陆"""
     requests.post("https://c34a02aaeb0d6.cname.frontwize.com/php/v4/exit", data={"session_id": session_id})
