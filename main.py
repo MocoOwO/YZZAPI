@@ -133,6 +133,11 @@ def login(username: str, password: str, Log: bool = True) -> str:
     return session_id
 
 
+def get_usedsize(session_id):
+    return int(requests.post("https://c34a02aaeb0d6.cname.frontwize.com/php/v4/get_usedsize",
+                             data={"post": 1, "session_id": session_id}).text)
+
+
 def logout(session_id):
     """退出登陆"""
     requests.post("https://c34a02aaeb0d6.cname.frontwize.com/php/v4/exit", data={"session_id": session_id})
