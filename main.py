@@ -143,6 +143,7 @@ def copy_file(session_id, to_dir, file_id):
                       data={"new_parent_folder_id": to_dir, "folders_id": 0, "files_id": f"{0},{file_id}",
                             "session_id": session_id}).text
 
+
 def copy_folder(session_id, to_dir, folder_id):
     r = requests.post("https://c34a02aaeb0d6.cname.frontwize.com/php/v4/files_paste",
                       data={"new_parent_folder_id": to_dir, "folders_id": f"{0},{folder_id}", "files_id": f"{0}",
@@ -236,6 +237,14 @@ def get_all_file(session_id, id=0, root=Folder({"name": "root", "date": "N/A", "
         All[root].append(File(i))
 
     return All
+
+
+def hash_copy(session_id, filename, file_hash, parent_folder, size):
+    r = requests.post("https://c34a02aaeb0d6.cname.frontwize.com/php/v4/hash_copy",
+                      data={"name": filename, "key": "", "parent_folder_id": parent_folder,
+                            "size": size,
+                            "hash": file_hash, "session_id": session_id})
+    return r.json()["status"]
 
 
 def upload_file(session_id, parent_folder, file_path, BLOCK=50 * 1024 * 1024):
