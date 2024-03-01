@@ -28,8 +28,9 @@
 ```
 然后安装requirements.txt里的需求，启动webdav.py 就可以了。
 
-> 注意: 没有外链功能可能导致文件下载失败(这是一个已知Bug)  
-> 解决方案是在webdav.py中 ```flask.redirect(f"https://a.download.yunzhongzhuan.com{file.url}")``` 改成自己的域名(需要在云中转开通)
+> ~~注意: 没有外链功能可能导致文件下载失败(这是一个已知Bug)~~  
+> ~~解决方案是在webdav.py中 ```flask.redirect(f"https://a.download.yunzhongzhuan.com{file.url}")``` 改成自己的域名(需要在云中转开通)~~ 
+> 目前此问题已经解决，感谢官方提供的公链
 
 ## 声明 (๑•ิཬ•ั๑)
 

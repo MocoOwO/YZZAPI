@@ -121,7 +121,7 @@ def mainLogic(path):
             if file.name == filename:
                 # print("OK?")
                 main.logout(SESSION_ID)
-                return flask.redirect(f"https://download.yunzhongzhuan.com{file.url}")
+                return flask.redirect(f"https://yunzhongzhuan.com.publicdn.com{file.url}")
     elif request.method == "MOVE" and path[-1:] != "/":
         to_dir = (urllib.parse.urlparse(urllib.parse.unquote(request.headers["Destination"])).path)
         from_dir = (urllib.parse.urlparse(request.url).path)
